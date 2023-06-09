@@ -7,7 +7,7 @@
 
 <div class="grid grid-cols-3 gap-4">
 	{#each images as image, index (image.id)}
-		{@const imageUrl = `http://localhost:1337${image.attributes.url}`}
+		{@const imageUrl = `https://treats-portfolio-cms.fly.dev${image.attributes.url}`}
 		<a href={imageUrl}>
 			<img
 				class="w-[600px] h-[450px] hover:brightness-110 cursor-zoom-in object-cover"
