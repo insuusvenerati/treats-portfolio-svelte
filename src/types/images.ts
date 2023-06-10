@@ -1,9 +1,9 @@
-export interface ImagesRoot {
-	data: Daum[];
+export interface BgResponse {
+	data: Data;
 	meta: Meta;
 }
 
-export interface Daum {
+export interface Data {
 	id: number;
 	attributes: Attributes;
 }
@@ -15,18 +15,18 @@ export interface Attributes {
 }
 
 export interface Images {
-	data: Daum2[];
+	data: Daum[];
 }
 
-export interface Daum2 {
+export interface Daum {
 	id: number;
 	attributes: Attributes2;
 }
 
 export interface Attributes2 {
 	name: string;
-	alternativeText: string;
-	caption: string;
+	alternativeText: any;
+	caption: any;
 	width: number;
 	height: number;
 	formats: Formats;
@@ -35,43 +35,15 @@ export interface Attributes2 {
 	mime: string;
 	size: number;
 	url: string;
-	previewUrl: string;
+	previewUrl: any;
 	provider: string;
 	provider_metadata: any;
 	createdAt: string;
 	updatedAt: string;
-	blurhash: string;
 }
 
 export interface Formats {
-	small: Small;
-	medium: Medium;
 	thumbnail: Thumbnail;
-	large?: Large;
-}
-
-export interface Small {
-	ext: string;
-	url: string;
-	hash: string;
-	mime: string;
-	name: string;
-	path: string;
-	size: number;
-	width: number;
-	height: number;
-}
-
-export interface Medium {
-	ext: string;
-	url: string;
-	hash: string;
-	mime: string;
-	name: string;
-	path: string;
-	size: number;
-	width: number;
-	height: number;
 }
 
 export interface Thumbnail {
@@ -80,31 +52,10 @@ export interface Thumbnail {
 	hash: string;
 	mime: string;
 	name: string;
-	path: string;
+	path: any;
 	size: number;
 	width: number;
 	height: number;
 }
 
-export interface Large {
-	ext: string;
-	url: string;
-	hash: string;
-	mime: string;
-	name: string;
-	path: string;
-	size: number;
-	width: number;
-	height: number;
-}
-
-export interface Meta {
-	pagination: Pagination;
-}
-
-export interface Pagination {
-	page: number;
-	pageSize: number;
-	pageCount: number;
-	total: number;
-}
+export interface Meta {}
