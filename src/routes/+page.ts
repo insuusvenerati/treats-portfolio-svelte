@@ -2,11 +2,11 @@ import type { BgResponse } from '../types/images';
 import type { PageLoad } from './$types';
 
 export const load = (async () => {
-	const response = await fetch(`${process.env.STRAPI_URL}/api/bg?populate=images`);
+	const response = await fetch(`${import.meta.env.VITE_STRAPI_URL}/api/bg?populate=images`);
 	const data: BgResponse = await response.json();
 	const images = data.data.attributes.images.data.map((image) => ({
 		id: image.id,
-		url: `${process.env.STRAPI_URL}${image.attributes.url}`,
+		url: `${import.meta.env.VITE_STRAPI_URL}${image.attributes.url}`,
 		width: image.attributes.width,
 		height: image.attributes.height
 	}));
