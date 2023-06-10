@@ -10,7 +10,7 @@
 
 <div class="grid grid-cols-3 gap-4">
 	{#each images as image, i}
-		{@const imageUrl = `http://localhost:1337${image.url}`}
+		{@const imageUrl = `${process.env.STRAPI_URL}${image.url}`}
 		<button>
 			<img
 				class="w-[600px] h-[450px] hover:brightness-110 cursor-zoom-in object-cover"
