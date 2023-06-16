@@ -6,7 +6,7 @@ export const load = (async () => {
 	const data: BgResponse = await response.json();
 	const images = data.data.attributes.images.data.map((image) => ({
 		id: image.id,
-		url: `${import.meta.env.VITE_STRAPI_URL}${image.attributes.url}`,
+		url: image.attributes.url,
 		width: image.attributes.width,
 		height: image.attributes.height
 	}));
