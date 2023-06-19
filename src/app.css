@@ -3,5 +3,5 @@
 @tailwind utilities;
 
 body {
-  @apply p-4 bg-black text-white;
+	@apply p-4 bg-black text-white;
 }
