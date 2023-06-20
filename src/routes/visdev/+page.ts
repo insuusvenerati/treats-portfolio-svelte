@@ -1,8 +1,8 @@
-import type { ImagesResponse } from "../lib/types/images";
-import type { PageLoad } from "./$types";
+import type { PageLoad } from "../$types";
+import type { ImagesResponse } from "../../lib/types/images";
 
 export const load = (async ({ fetch }) => {
-  const response = await fetch(`${import.meta.env.VITE_STRAPI_URL}/api/bg?populate=images`);
+  const response = await fetch(`${import.meta.env.VITE_STRAPI_URL}/api/sketchbook?populate=images`);
   const data: ImagesResponse = await response.json();
   const images = data.data.attributes.images.data.map((image, i) => ({
     index: i,

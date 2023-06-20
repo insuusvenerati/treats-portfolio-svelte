@@ -1,4 +1,4 @@
-export interface BgResponse {
+export interface ImagesResponse {
   data: Data;
   meta: Meta;
 }
